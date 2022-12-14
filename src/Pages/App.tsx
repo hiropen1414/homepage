@@ -6,9 +6,9 @@ import { DEPLOY_PAGE, GAME_PATH } from '../Commons/constants/path';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={DEPLOY_PAGE}>
       <Routes>
-        <Route path={'/' || DEPLOY_PAGE } element={<Top />} />
+        <Route path={DEPLOY_PAGE} element={<Top />} />
         <Route path={GAME_PATH} element={<Game />} />
         <Route path='*' element={<Error />} />
       </Routes>
