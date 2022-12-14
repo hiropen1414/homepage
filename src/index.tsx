@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './Pages/App';
 import reportWebVitals from './reportWebVitals';
+// import { ApolloProvider } from '@apollo/client';
+// import { ApolloClient, InMemoryCache } from '@apollo/client';
+
+// const client = new ApolloClient({
+//   uri: 'https://48p1r2roz4.sse.codesandbox.io',
+//   cache: new InMemoryCache(),
+// });
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
     <App />

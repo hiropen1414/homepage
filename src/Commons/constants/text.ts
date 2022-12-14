@@ -1,0 +1,11 @@
+export const WEB_TEXT = 'web作品';
+export const ELECT_TEXT = '電子工作品';
+export const INQUIRY_TEXT = 'お問い合わせ';
+export const MEDIA_TEXT = 'メディア作品';
+export const GAME_TEXT = 'ゲーム作品';
+export const HOME_TEXT = 'Home';
+export const MENU_LIST = '作品一覧';
+export const SEARCH = '検索';
+export const ACTIVITY_TEXT = '活動内容';
+export const RIGHT = 'right';
+export const ADJACENT_CARD = 'adjacent';
