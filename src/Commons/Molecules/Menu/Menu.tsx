@@ -20,6 +20,12 @@ export const Menu = (props: Props) => {
   };
 
   return (
-    <AntMenu onClick={OnClick} mode={props.mode} items={MENU_ITEMS} theme={props.theme} style={props.style} />
+    <AntMenu
+      onClick={OnClick}
+      mode={props.mode}
+      items={MENU_ITEMS}
+      theme={props.theme}
+      style={props.style}
+    />
   );
 };
