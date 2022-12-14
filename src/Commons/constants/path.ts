@@ -3,4 +3,5 @@ export const MEDIA_PATH = '/media';
 export const WEB_PATH = '/web';
 export const ELECT_PATH = '/elect';
 export const INQUIRY_PATH = '/inquiry';
-export const DEPLOY_PAGE = '/top';
+
+export const HOME_URL = process.env.PUBLIC_URL;

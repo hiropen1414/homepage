@@ -2,13 +2,14 @@ import Top from './Top';
 import { Game } from './Game';
 import { Error } from './Error';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { DEPLOY_PAGE, GAME_PATH } from '../Commons/constants/path';
+import { GAME_PATH, HOME_URL } from '../Commons/constants/path';
 
 const App = () => {
+  console.log(HOME_URL);
   return (
-    <BrowserRouter basename={DEPLOY_PAGE}>
+    <BrowserRouter>
       <Routes>
-        <Route path={DEPLOY_PAGE} element={<Top />} />
+        <Route path={HOME_URL} element={<Top />} />
         <Route path={GAME_PATH} element={<Game />} />
         <Route path='*' element={<Error />} />
       </Routes>
