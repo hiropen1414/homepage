@@ -10,4 +10,4 @@ export const Search = (props:Props) => {
   return (
     <Search placeholder={props.holder} onSearch={onSearch} style={{ width: 200 }} />
   );
-}
+};

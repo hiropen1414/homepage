@@ -18,4 +18,4 @@ export const Carousel = (props: Props) => {
       {props.components}
     </AntCarousel>
   );
-}
+};

@@ -33,4 +33,4 @@ export const Card = (props: Props) => {
       </AntCard >
     </div>
   );
-}
+};

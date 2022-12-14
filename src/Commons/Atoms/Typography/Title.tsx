@@ -1,5 +1,5 @@
 import { Typography } from 'antd';
-import { Option } from './option'
+import { Option } from './option';
 type Props = {
   level?: 1 | 5 | 2 | 3 | 4 | undefined;
   text?: string;
@@ -19,4 +19,4 @@ export const Title = (props: Props) => {
       {props.text}
     </Title>
   );
-}
+};
