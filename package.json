@@ -1,5 +1,6 @@
 {
   "name": "homepage",
+  "homepage": "https://hiropen1414.github.io/new_homepage",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -25,7 +26,8 @@
     "start": "craco start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +49,7 @@
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.10.5",
+    "gh-pages": "^4.0.0",
     "react-router": "^6.4.3",
     "react-router-dom": "^6.4.3"
   }
