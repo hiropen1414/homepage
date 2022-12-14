@@ -1,6 +1,6 @@
-import { Menu as AntMenu, MenuProps } from "antd"
-import { useTransition } from "../../Atoms/Hooks/useTransition";
-import { MENU_ITEMS } from "../../constants/menuItem";
+import { Menu as AntMenu, MenuProps } from 'antd';
+import { useTransition } from '../../Atoms/Hooks/useTransition';
+import { MENU_ITEMS } from '../../constants/menuItem';
 
 type Props = {
   mode?: 'horizontal' | 'vertical';
@@ -17,9 +17,9 @@ export const Menu = (props: Props) => {
         {navigate.navigate('/' + e.key)}
       </>
     );
-  }
+  };
 
   return (
     <AntMenu onClick={OnClick} mode={props.mode} items={MENU_ITEMS} theme={props.theme} style={props.style} />
   );
-}
+};
