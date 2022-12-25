@@ -1,5 +1,5 @@
 import { Image } from '../Atoms/Image/Image';
-import logo from '../static/img/footer.png';
+import logo from '../static/svg/icon_footer.svg';
 export const Footer = () => {
   const style = {
     footer: {

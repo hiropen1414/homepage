@@ -1,36 +1,33 @@
-import { Card as AntCard, Col, ImageProps, Row } from 'antd';
+import { Card as AntCard } from 'antd';
 import { CSSProperties, ReactNode } from 'react';
-import { Image } from '../../Atoms/Image/Image';
 
 
 type Props = {
   border?: boolean;
   style?: React.CSSProperties;
-  cover?: string;
-  imgStyle?: ImageProps;
+  element?: ReactNode;
   boxStyle?: CSSProperties;
   text?: string;
-  title?: string | ReactNode;
+  title?: ReactNode;
+  cardTextStyle?: CSSProperties;
+  row?: {
+    colSpan?: number;
+  }
 }
 
 export const Card = (props: Props) => {
-  console.log(props.boxStyle);
   return (
     <div style={props.boxStyle}>
       <AntCard
-        title={props.title}
         bordered={props.border}
         bodyStyle={props.style}
+        cover={props.element ?? null}
       >
-        <Row>
-          <Col span={12}>{props.cover ? <Image src={props.cover} preview={false} styles={props.imgStyle} /> : null}</Col>
-          <Col span={11}>
-            <p>
-              {props.text}
-            </p>
-          </Col>
-        </Row>
+        {props.title}
+        <p style={props.cardTextStyle}>
+          {props.text}
+        </p>
       </AntCard >
-    </div>
+    </div >
   );
 };

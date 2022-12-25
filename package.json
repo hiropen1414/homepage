@@ -4,6 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.8.0",
+    "@apollo/client": "^3.7.2",
     "@craco/craco": "^6.4.5",
     "@emotion/react": "^11.10.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -15,7 +17,6 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "antd": "^4.24.1",
-    "apollo-server": "^3.11.1",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -52,6 +53,7 @@
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.10.5",
+    "apollo-server": "^3.11.1",
     "gh-pages": "^4.0.0",
     "react-router": "^6.4.3",
     "react-router-dom": "^6.4.3"

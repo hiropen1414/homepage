@@ -3,7 +3,7 @@ import { CSSProperties } from 'react';
 
 type Props = {
   src: string;
-  styles?: ImageProps;
+  styles?: ImageProps | CSSProperties;
   boxStyles?: CSSProperties;
   preview?:boolean;
 }
