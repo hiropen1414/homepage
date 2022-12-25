@@ -37,6 +37,8 @@ const styles = {
     marginLeft: '4em',
     marginTop: '-2em',
     paddingBottom: '1.5em',
+    textDecoration: 'underline',
+    textUnderlineOffset: 8,
   }
 };
 
@@ -50,7 +52,7 @@ const carouselNode = {
 
 const Top = () => {
   return (
-    <div style={{ maxWidth:1440, margin: 'auto' }}>
+    <div style={{ maxWidth: 1440, margin: 'auto' }}>
       <Header />
       <Carousel
         components={carouselNode.node}

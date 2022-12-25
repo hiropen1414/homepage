@@ -1,23 +1,20 @@
 {
   "files": {
     "main.css": "/new_homepage/static/css/main.4d189d10.css",
-    "main.js": "/new_homepage/static/js/main.5de7db43.js",
-    "static/js/787.5c39024c.chunk.js": "/new_homepage/static/js/787.5c39024c.chunk.js",
+    "main.js": "/new_homepage/static/js/main.f16ecf29.js",
     "static/media/seiyuusai.png": "/new_homepage/static/media/seiyuusai.94afb942387eba00bf81.png",
     "static/media/seiyuusai2.png": "/new_homepage/static/media/seiyuusai2.e8abdfb7e4ada350fd57.png",
     "static/media/VSCode.PNG": "/new_homepage/static/media/VSCode.07ba98fbbb087a1a12f3.PNG",
-    "static/media/conference.png": "/new_homepage/static/media/conference.4e80623b1a0d96597dde.png",
-    "static/media/header.png": "/new_homepage/static/media/header.ab4f2860e73cc48b476a.png",
-    "static/media/footer.png": "/new_homepage/static/media/footer.347e99a4b54c09cebff2.png",
+    "static/media/icon_header.svg": "/new_homepage/static/media/icon_header.558b55f7ea4638e3d50129148c5c7784.svg",
+    "static/media/goal.svg": "/new_homepage/static/media/goal.e05bc82d663b9b4bfc5c9108648255af.svg",
     "static/media/Butler_Light.otf": "/new_homepage/static/media/Butler_Light.0737d51bdc90202fe832.otf",
-    "static/media/task.png": "/new_homepage/static/media/task.21a7aaad2f9b6325048c.png",
+    "static/media/icon_footer.svg": "/new_homepage/static/media/icon_footer.9861199d1ea1083839d7195f645cba93.svg",
     "index.html": "/new_homepage/index.html",
     "main.4d189d10.css.map": "/new_homepage/static/css/main.4d189d10.css.map",
-    "main.5de7db43.js.map": "/new_homepage/static/js/main.5de7db43.js.map",
-    "787.5c39024c.chunk.js.map": "/new_homepage/static/js/787.5c39024c.chunk.js.map"
+    "main.f16ecf29.js.map": "/new_homepage/static/js/main.f16ecf29.js.map"
   },
   "entrypoints": [
     "static/css/main.4d189d10.css",
-    "static/js/main.5de7db43.js"
+    "static/js/main.f16ecf29.js"
   ]
 }
