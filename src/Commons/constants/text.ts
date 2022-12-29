@@ -21,9 +21,11 @@ export const MEDIA = 'media';
 export const WEB = 'web';
 export const ELECT = 'elect';
 export const INQUIRY = 'inquiry';
+export const ERROR= 'error';
 export const HOME = '';
 export const ACTIVITY = 'activity';
 
 export const VISION = 'vision';
 export const MISSION = 'mission';
 export const VALUE = 'value';
+export const NOT_FOUND = 'お探しのページが見つかりませんでした。'
