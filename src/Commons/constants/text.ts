@@ -28,4 +28,4 @@ export const ACTIVITY = 'activity';
 export const VISION = 'vision';
 export const MISSION = 'mission';
 export const VALUE = 'value';
-export const NOT_FOUND = 'お探しのページが見つかりませんでした。'
+export const NOT_FOUND = 'お探しのページが見つかりませんでした。';
