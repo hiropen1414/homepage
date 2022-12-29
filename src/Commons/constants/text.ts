@@ -9,3 +9,21 @@ export const SEARCH = '検索';
 export const ACTIVITY_TEXT = '活動内容';
 export const RIGHT = 'right';
 export const ADJACENT_CARD = 'adjacent';
+
+export const TITLE = 'title';
+export const PHILOSOPHY = '1';
+export const ACTIVITIES = '2';
+
+export const HORIZONTAL = 'horizontal';
+export const VERTICAL = 'VERTICAL';
+export const GAME = 'game';
+export const MEDIA = 'media';
+export const WEB = 'web';
+export const ELECT = 'elect';
+export const INQUIRY = 'inquiry';
+export const HOME = '';
+export const ACTIVITY = 'activity';
+
+export const VISION = 'vision';
+export const MISSION = 'mission';
+export const VALUE = 'value';

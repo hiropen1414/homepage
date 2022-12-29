@@ -52,7 +52,7 @@ const carouselNode = {
 
 const Top = () => {
   return (
-    <div style={{ maxWidth: 1440, margin: 'auto' }}>
+    <div style={{ maxWidth: 1440, margin: 'auto', marginLeft: -17 }}>
       <Header />
       <Carousel
         components={carouselNode.node}

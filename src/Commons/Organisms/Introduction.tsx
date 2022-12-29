@@ -1,13 +1,14 @@
 import { Title } from '../Atoms/Typography/Title';
 import { Option } from '../Atoms/Typography/option';
-import { Card } from '../Molecules/Card/Card';
 import { CSSProperties, useEffect, useState } from 'react';
-import { CardType } from './constants/CardContents';
+import { CardType, TRANS_RESTRICT_BOOL, TRANS_RESTRICT_VALUES } from './constants/CardContents';
 import { isEqual } from 'lodash';
 import { Space } from 'antd';
 import { ADJACENT_CARD, RIGHT } from '../constants/text';
-import { ACTIVITIES, TITLE } from './constants/text';
-
+import { ACTIVITIES, TITLE } from '../constants/text';
+import { useNavigate } from 'react-router';
+import { makeNewLine } from '../static/function/makeNewLine';
+import { IntroduceCard } from '../Molecules/introduceCard';
 
 type Props = {
   headline: {
@@ -17,12 +18,14 @@ type Props = {
 
 export const Introduction = (props: Props) => {
 
-  const [isVisible, setIsVisible] = useState(false);
-
+  const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
+  const navigate = useNavigate();
   const toggleVisibility = () => {
-    window.scrollY > 450
-      ? setIsVisible(true)
-      : setIsVisible(false);
+    const transLabels = Object.keys(TRANS_RESTRICT_BOOL).map((key) => key);
+    const isTrans = Object.values(TRANS_RESTRICT_BOOL).reduce((obj, item, index) => {
+      return ({ ...obj, [item.key]: (TRANS_RESTRICT_VALUES[transLabels[index]] <= window.scrollY) });
+    }, {});
+    setIsVisible(isTrans);
   };
 
   useEffect(() => {
@@ -48,37 +51,48 @@ export const Introduction = (props: Props) => {
       background: 'rgb(230,230,230,0.5)',
       borderLeft: 'solid 15px black'
     },
-    bodyStyle: {
-      width: 700,
+    bodyStyleAction: {
+      width: 600,
       height: 300,
       padding: 0,
       marginRight: 0,
+      marginTop: 24
     },
-    boxStyle: {
+    boxStyleAction: {
+      width: 600,
       position: 'relative' as const,
       marginTop: -16,
       marginBottom: 88,
-      marginLeft: 48
+      marginLeft: 56,
+      opacity: 0,
+      transition: '0s',
+      border: 'solid 3px rgba(30,30,30,0.4)',
+      borderRadius: 5,
+      zIndex:10000,
     },
     boxStylePhilosophy: {
       width: 324,
       padding: 0,
       marginRight: 0,
       marginTop: 32,
-      opacity: isVisible ? 1 : 0,
+      marginLeft: 8,
+      opacity: 0,
       transition: '0s',
       border: 'solid 3px rgba(30,30,30,0.4)',
-      borderRadius: 5
+      borderRadius: 5,
+      filter: 'drop-shadow(10px 10px 10px rgba(0,0,0,0.2))',
     },
     bodyStylePhilosophy: {
       width: '100%',
       height: 200,
-      marginTop: 30,
+      marginTop: 32,
     },
     cardTextStyle: {
       width: 296,
       wordWrap: 'break-word' as const,
-      paddingRight: 24
+      paddingRight: 24,
+      fontSize: '1.3em',
+      marginTop:16
     },
     titleStyle: {
       textAlign: 'center' as const,
@@ -89,73 +103,63 @@ export const Introduction = (props: Props) => {
     level: 1,
   };
 
+  const navigateFromCard = (path: string) => {
+    navigate(path);
+  };
   return (
     <>
-      {Object.keys(CardType).map((value) => {
-        console.log(value);
+      {Object.keys(CardType).map((value, cardTypeId) => {
         return (
-          <>
-            {Object.keys(CardType[value]).map((id) => {
-              if (isEqual(CardType[value][id].type, TITLE)) {
+          <div key={cardTypeId}>
+            {Object.keys(CardType[value]).map((cardId) => {
+              if (isEqual(CardType[value][cardId].type, TITLE)) {
                 return (
-                  <>
-                    <div>
-                      <Title
-                        text={CardType[value][id].titleText || ''}
-                        optionProps={titleOption}
-                        style={styles.font}
-                      />
-                    </div>
-                    <div>
-                      <p style={props.headline.style}>
-                        {CardType[value][id].text.split('\n').map((str: string) => {
-                          return (
-                            <>
-                              {str}
-                              <br />
-                            </>
-                          );
-                        })}
-                      </p>
-                    </div>
-                  </>
+                  <div key={cardId}>
+                    <Title
+                      text={CardType[value][cardId].titleText || ''}
+                      optionProps={titleOption}
+                      style={styles.font}
+                    />
+                    <p style={props.headline.style}>
+                      {makeNewLine(CardType[value][cardId].text)}
+                    </p>
+                  </div>
                 );
               } else {
-                const transitionStyle = { ...styles.boxStylePhilosophy, transition: CardType[value][id].transition };
+                const transitionStyle = {
+                  transition: CardType[value][cardId].transition,
+                  opacity: (isVisible[cardId]) ? 1 : 0
+                };
                 return (
-                  <Space key={id}>
+                  <Space key={cardId}>
                     <div style={{
-                      width: isEqual(CardType[value][id].side, RIGHT)
-                        ? 448 : isEqual(CardType[value][id].side, ADJACENT_CARD) ? 64 : 0
+                      width: isEqual(CardType[value][cardId].side, RIGHT)
+                        ? 536 : isEqual(CardType[value][cardId].side, ADJACENT_CARD) ? 64 : 0
                     }}>
                     </div>
-                    {
-                      (isEqual(value, ACTIVITIES)) ? (
-                        <Card
-                          title={<Title level={1} text={CardType[value][id].titleText} />}
-                          text={CardType[value][id].text}
-                          border={true}
-                          style={styles.bodyStyle}
-                          element={CardType[value][id].icon}
-                          boxStyle={styles.boxStyle}
-                        />
-                      ) : (
-                        <Card
-                          title={<Title level={1} text={CardType[value][id].titleText} style={styles.titleStyle} />}
-                          text={CardType[value][id].text}
-                          border={true}
-                          cardTextStyle={styles.cardTextStyle}
-                          element={CardType[value][id].icon}
-                          boxStyle={transitionStyle}
-                          style={styles.bodyStylePhilosophy}
-                        />
-                      )
-                    }
+                    <IntroduceCard
+                      title={<Title optionProps={titleOption} text={CardType[value][cardId].titleText} style={styles.titleStyle} />}
+                      text={makeNewLine(CardType[value][cardId].text)}
+                      border={true}
+                      style={isEqual(value, ACTIVITIES)
+                        ? styles.bodyStyleAction
+                        : styles.bodyStylePhilosophy
+                      }
+                      cardTextStyle={styles.cardTextStyle}
+                      element={CardType[value][cardId].icon}
+                      boxStyle={isEqual(value, ACTIVITIES)
+                        ? { ...styles.boxStyleAction, ...transitionStyle }
+                        : { ...styles.boxStylePhilosophy, ...transitionStyle }
+                      }
+                      hoverAble={CardType[value][cardId].hoverAble}
+                      onClick={() => navigateFromCard(CardType[value][cardId].path ?? '')}
+                      isTransition={!isEqual(CardType[value][cardId].path, undefined)}
+                    />
                   </Space>
                 );
               }
             })}
-          </>
+          </div>
         );
       })}
     </>
