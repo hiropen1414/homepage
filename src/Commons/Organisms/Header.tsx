@@ -5,7 +5,11 @@ import { Search } from '../Molecules/Serach/Serach';
 import { Image } from '../Atoms/Image/Image';
 import logo from '../static/svg/icon_header.svg';
 
-export const Header = () => {
+type Props = {
+  delete?: boolean;
+}
+
+export const Header = (props: Props) => {
   const style = {
     headerDesign: {
       margin: 'auto',
@@ -14,16 +18,17 @@ export const Header = () => {
     },
     defaultImage: {
       height: 80,
-      margin: '10px 0',
+      margin: 'auto',
       display: 'block',
       float: 'left' as const,
-      width: 400,
-      marginLeft: 150,
+      width: 304,
     },
     menu: {
       boxShadow: 'rgba(122,122,122,0.0588235) 0px 0px 24px 20px',
     },
     search: {
+      position: 'absolute' as const,
+      right: 8,
       marginTop: 35
     },
     menuBox: {
@@ -32,7 +37,7 @@ export const Header = () => {
       maxWidth: '1440px',
     },
     imgBox: {
-      margin: 'auto',
+      marginLeft: 48,
     }
   };
   return (
@@ -41,13 +46,17 @@ export const Header = () => {
         <div style={style.imgBox}>
           <Image src={logo} styles={style.defaultImage} preview={false} />
         </div>
-        <div style={style.search}>
-          <Search holder={SEARCH} />
+        {!(props.delete) &&
+          <div style={style.search}>
+            <Search holder={SEARCH} />
+          </div>
+        }
+      </div>
+      {!(props.delete) &&
+        <div style={style.menuBox}>
+          <Menu theme='light' mode={HORIZONTAL} style={style.menu} />
         </div>
-      </div>
-      <div style={style.menuBox}>
-        <Menu theme='light' mode={HORIZONTAL} style={style.menu} />
-      </div>
+      }
     </>
   );
 };
