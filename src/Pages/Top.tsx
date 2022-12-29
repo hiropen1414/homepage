@@ -2,7 +2,7 @@
 import { Carousel } from '../Commons/Molecules/Carousel/carousel';
 import { Header } from '../Commons/Organisms/Header';
 import CarouselImage1 from '../Commons/static/img/Carousel/seiyuusai2.png';
-import CarouselImage2 from '../Commons/static/img/Carousel/VSCode.png';
+import CarouselImage2 from '../Commons/static/img/Carousel/code.png';
 import CarouselImage3 from '../Commons/static/img/Carousel/seiyuusai.png';
 import { Image } from '../Commons/Atoms/Image/Image';
 import { Introduction } from '../Commons/Organisms/Introduction';
