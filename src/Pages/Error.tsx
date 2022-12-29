@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { Header } from '../Commons/Organisms/Header';
 import { Image } from '../Commons/Atoms/Image/Image';
 import errorIcon from '../Commons/static/svg/icon_error.svg';
@@ -49,11 +48,11 @@ export const Error = (state: navigateState) => {
   return (
     <>
       <Header delete={true} />
-      <div css={css(style.box)}>
-        <p css={css(style.errorText)}>
+      <div style={style.box}>
+        <p style={style.errorText}>
           {state.state?.errorMessage ?? 'error'}
         </p>
-        <div css={css(style.imgBox)}>
+        <div style={style.imgBox}>
           <Image src={errorIcon} preview={false} styles={style.img} />
         </div>
         <Button type='primary' label='topへ戻る' style={style.button} onClick={navigateTop} />
