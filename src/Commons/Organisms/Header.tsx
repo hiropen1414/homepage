@@ -1,7 +1,7 @@
 import { HORIZONTAL } from '../constants/text';
 import { SEARCH } from '../constants/text';
 import { Menu } from '../Molecules/Menu/Menu';
-import { Search } from '../constants/Serach/Serach';
+import { Search } from '../Molecules/Serach/Serach';
 import { Image } from '../Atoms/Image/Image';
 import logo from '../static/svg/icon_header.svg';
 
