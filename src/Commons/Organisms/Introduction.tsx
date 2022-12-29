@@ -68,7 +68,7 @@ export const Introduction = (props: Props) => {
       transition: '0s',
       border: 'solid 3px rgba(30,30,30,0.4)',
       borderRadius: 5,
-      zIndex:10000,
+      zIndex: 10000,
     },
     boxStylePhilosophy: {
       width: 324,
@@ -92,7 +92,7 @@ export const Introduction = (props: Props) => {
       wordWrap: 'break-word' as const,
       paddingRight: 24,
       fontSize: '1.3em',
-      marginTop:16
+      marginTop: 16
     },
     titleStyle: {
       textAlign: 'center' as const,
@@ -138,7 +138,13 @@ export const Introduction = (props: Props) => {
                     }}>
                     </div>
                     <IntroduceCard
-                      title={<Title optionProps={titleOption} text={CardType[value][cardId].titleText} style={styles.titleStyle} />}
+                      title={
+                        <Title
+                          optionProps={titleOption}
+                          text={CardType[value][cardId].titleText}
+                          style={styles.titleStyle}
+                        />
+                      }
                       text={makeNewLine(CardType[value][cardId].text)}
                       border={true}
                       style={isEqual(value, ACTIVITIES)
