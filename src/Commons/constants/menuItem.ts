@@ -1,5 +1,5 @@
 import { MenuProps } from 'antd';
-import { ELECT, GAME, INQUIRY, MEDIA, WEB, ACTIVITY } from './index';
+import { ELECT, GAME, INQUIRY, MEDIA, WEB, ACTIVITY } from '../constants/text';
 import { HOME_URL } from './path';
 import { ACTIVITY_TEXT, ELECT_TEXT, GAME_TEXT, HOME_TEXT, INQUIRY_TEXT, MEDIA_TEXT, MENU_LIST, WEB_TEXT } from './text';
 

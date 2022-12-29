@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { GAME_PATH, HOME_URL } from '../Commons/constants/path';
 
 const App = () => {
-  console.log(HOME_URL);
   return (
     <BrowserRouter>
       <Routes>

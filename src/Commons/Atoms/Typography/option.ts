@@ -1,6 +1,3 @@
-import { TooltipProps } from 'antd';
-import { ReactNode } from 'react';
-
 export type Option = {
   code?: boolean;
   // copyable?: boolean | copyable;
