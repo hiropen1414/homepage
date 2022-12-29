@@ -2,7 +2,7 @@
 import { Carousel } from '../Commons/Molecules/Carousel/carousel';
 import { Header } from '../Commons/Organisms/Header';
 import CarouselImage1 from '../Commons/static/img/Carousel/seiyuusai2.png';
-import CarouselImage2 from '../Commons/static/img/Carousel/VSCode.PNG';
+import CarouselImage2 from '../Commons/static/img/Carousel/VSCode.png';
 import CarouselImage3 from '../Commons/static/img/Carousel/seiyuusai.png';
 import { Image } from '../Commons/Atoms/Image/Image';
 import { Introduction } from '../Commons/Organisms/Introduction';
@@ -44,15 +44,33 @@ const styles = {
 
 const carouselNode = {
   node: [
-    <Image key='img1' src={CarouselImage1} styles={styles.imgStyle} boxStyles={styles.boxStyles} preview={false}></Image>,
-    <Image key='img2' src={CarouselImage2} styles={styles.imgStyle} boxStyles={styles.boxStyles} preview={false}></Image>,
-    <Image key='img3' src={CarouselImage3} styles={styles.imgStyle} boxStyles={styles.boxStyles} preview={false}></Image>,
+    <Image
+      key='img1'
+      src={CarouselImage1}
+      styles={styles.imgStyle}
+      boxStyles={styles.boxStyles}
+      preview={false}
+    />,
+    <Image
+      key='img2'
+      src={CarouselImage2}
+      styles={styles.imgStyle}
+      boxStyles={styles.boxStyles}
+      preview={false}
+    />,
+    <Image
+      key='img3'
+      src={CarouselImage3}
+      styles={styles.imgStyle}
+      boxStyles={styles.boxStyles}
+      preview={false}
+    />
   ]
 };
 
 const Top = () => {
   return (
-    <div style={{ maxWidth: 1440, margin: 'auto' }}>
+    <div style={{ maxWidth: 1440, margin: 'auto', marginLeft: -17 }}>
       <Header />
       <Carousel
         components={carouselNode.node}
