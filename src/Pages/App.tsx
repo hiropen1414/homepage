@@ -7,9 +7,8 @@ import { NOT_FOUND_CODE } from '../Commons/constants/errorcode';
 import { NOT_FOUND } from '../Commons/constants/text';
 
 const App = () => {
-  const ROUTER_BASENAME = process.env.NODE_ENV === 'development' ? '/' : '/homepage';
   return (
-    <BrowserRouter basename={ROUTER_BASENAME}>
+    <BrowserRouter basename='/'>
       <Routes>
         <Route path={HOME_URL} element={<Top />} />
         <Route path={GAME_PATH} element={<Game />} />
