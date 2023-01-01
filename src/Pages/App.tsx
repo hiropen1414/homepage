@@ -7,7 +7,7 @@ import { NOT_FOUND_CODE } from '../Commons/constants/errorcode';
 import { NOT_FOUND } from '../Commons/constants/text';
 
 const App = () => {
-  const BASE_NAME = process.env.NODE_ENV === 'development' ? '/' : '/repo-name';
+  const BASE_NAME = process.env.NODE_ENV === 'development' ? '/' : `${HOME_URL}`;
   console.log(BASE_NAME);
   return (
     <BrowserRouter>

@@ -6,3 +6,4 @@ export const ERROR_PATH = '/error';
 export const INQUIRY_PATH = '/inquiry';
 
 export const HOME_URL = process.env.PUBLIC_URL;
+
