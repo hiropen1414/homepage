@@ -8,7 +8,7 @@ import { NOT_FOUND } from '../Commons/constants/text';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='homepage'>
       <Routes>
         <Route path={HOME_URL} element={<Top />} />
         <Route path={GAME_PATH} element={<Game />} />
