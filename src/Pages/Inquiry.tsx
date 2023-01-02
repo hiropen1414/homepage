@@ -9,8 +9,7 @@ export const Inquiry = () => {
       <div
         className='formrun-embed'
         data-formrun-form='@s--1653740106'
-        data-formrun-redirect='true'
-      >
+        data-formrun-redirect='true'>
       </div>
     </>
   );
