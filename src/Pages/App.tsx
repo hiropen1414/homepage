@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ERROR_PATH, GAME_PATH, HOME_URL, INQUIRY_PATH } from '../Commons/constants/path';
 import { NOT_FOUND_CODE } from '../Commons/constants/errorcode';
 import { NOT_FOUND } from '../Commons/constants/text';
-import { Inquiry } from './Inquiry';
 
 const App = () => {
   return (
@@ -13,7 +12,6 @@ const App = () => {
       <Routes>
         <Route path={HOME_URL} element={<Top />} />
         <Route path={GAME_PATH} element={<Game />} />
-        <Route path={INQUIRY_PATH} element={<Inquiry />} />
         <Route path={ERROR_PATH} element={<Error state={{ errorCode: NOT_FOUND_CODE, errorMessage: NOT_FOUND }} />} />
         <Route path='*' element={<Error state={{ errorCode: NOT_FOUND_CODE, errorMessage: NOT_FOUND }} />} />
       </Routes>
