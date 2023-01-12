@@ -21,7 +21,7 @@ export const MEDIA = 'media';
 export const WEB = 'web';
 export const ELECT = 'elect';
 export const INQUIRY = 'inquiry';
-export const ERROR= 'error';
+export const ERROR = 'error';
 export const HOME = '';
 export const ACTIVITY = 'activity';
 
@@ -29,3 +29,7 @@ export const VISION = 'vision';
 export const MISSION = 'mission';
 export const VALUE = 'value';
 export const NOT_FOUND = 'お探しのページが見つかりませんでした。';
+
+export const FOOTER_CLASS_NAME = 'footerList';
+
+export const CLUB_INFO = '〒191-8506 東京都日野市程久保2-1-1 Ponte棟325号室\nGmail:meisei.denkibu@gmail.com';

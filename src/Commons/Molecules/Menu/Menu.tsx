@@ -1,5 +1,5 @@
 import { Menu as AntMenu, MenuProps } from 'antd';
-import { useTransition } from '../../Atoms/Hooks/useTransition';
+import { useNavigate } from 'react-router';
 import { MENU_ITEMS } from '../../constants/menuItem';
 
 type Props = {
@@ -10,11 +10,11 @@ type Props = {
 
 export const Menu = (props: Props) => {
 
-  const navigate = useTransition();
+  const navigate = useNavigate();
   const OnClick: MenuProps['onClick'] = e => {
     return (
       <>
-        {navigate.navigate('/' + e.key)}
+        {navigate('/' + e.key)}
       </>
     );
   };
