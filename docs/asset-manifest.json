@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/homepage/static/css/main.719a21b9.css",
-    "main.js": "/homepage/static/js/main.94151dfe.js",
-    "static/media/elect.png": "/homepage/static/media/elect.af13ce7e98636ef36df7.png",
-    "static/media/seiyuusai.png": "/homepage/static/media/seiyuusai.94afb942387eba00bf81.png",
-    "static/media/seiyuusai2.png": "/homepage/static/media/seiyuusai2.e8abdfb7e4ada350fd57.png",
-    "static/media/icon_error.svg": "/homepage/static/media/icon_error.2f7d2bb79fc98590a2605e505d7e85d9.svg",
-    "static/media/code.png": "/homepage/static/media/code.07ba98fbbb087a1a12f3.png",
-    "static/media/game.png": "/homepage/static/media/game.376f8afdf29323a8fb25.png",
-    "static/media/web.png": "/homepage/static/media/web.01a6c1dc8562912eb3d1.png",
-    "static/media/media.png": "/homepage/static/media/media.fd316b9efac30daa0d3a.png",
-    "static/media/icon_header.svg": "/homepage/static/media/icon_header.558b55f7ea4638e3d50129148c5c7784.svg",
-    "static/media/goal.svg": "/homepage/static/media/goal.e05bc82d663b9b4bfc5c9108648255af.svg",
-    "static/media/Butler_Light.otf": "/homepage/static/media/Butler_Light.0737d51bdc90202fe832.otf",
-    "static/media/icon_footer.svg": "/homepage/static/media/icon_footer.9861199d1ea1083839d7195f645cba93.svg",
-    "index.html": "/homepage/index.html",
-    "main.719a21b9.css.map": "/homepage/static/css/main.719a21b9.css.map",
-    "main.94151dfe.js.map": "/homepage/static/js/main.94151dfe.js.map"
+    "main.css": "/static/css/main.3f026572.css",
+    "main.js": "/static/js/main.1c53afdc.js",
+    "static/media/elect.png": "/static/media/elect.af13ce7e98636ef36df7.png",
+    "static/media/seiyuusai.png": "/static/media/seiyuusai.94afb942387eba00bf81.png",
+    "static/media/seiyuusai2.png": "/static/media/seiyuusai2.e8abdfb7e4ada350fd57.png",
+    "static/media/icon_error.svg": "/static/media/icon_error.2f7d2bb79fc98590a2605e505d7e85d9.svg",
+    "static/media/code.png": "/static/media/code.07ba98fbbb087a1a12f3.png",
+    "static/media/game.png": "/static/media/game.376f8afdf29323a8fb25.png",
+    "static/media/web.png": "/static/media/web.01a6c1dc8562912eb3d1.png",
+    "static/media/media.png": "/static/media/media.fd316b9efac30daa0d3a.png",
+    "static/media/icon_header.svg": "/static/media/icon_header.558b55f7ea4638e3d50129148c5c7784.svg",
+    "static/media/goal.svg": "/static/media/goal.e05bc82d663b9b4bfc5c9108648255af.svg",
+    "static/media/Butler_Light.otf": "/static/media/Butler_Light.0737d51bdc90202fe832.otf",
+    "static/media/icon_footer.svg": "/static/media/icon_footer.f9ba580bac47cd655f70f324e3d105e2.svg",
+    "index.html": "/index.html",
+    "main.3f026572.css.map": "/static/css/main.3f026572.css.map",
+    "main.1c53afdc.js.map": "/static/js/main.1c53afdc.js.map"
   },
   "entrypoints": [
-    "static/css/main.719a21b9.css",
-    "static/js/main.94151dfe.js"
+    "static/css/main.3f026572.css",
+    "static/js/main.1c53afdc.js"
   ]
 }

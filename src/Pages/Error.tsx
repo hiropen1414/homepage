@@ -41,10 +41,10 @@ export const Error = (state: navigateState) => {
   };
 
   const navigateTop = () => {
-    window.location.href = HOME_URL;
+    window.location.href = '/#' + HOME_URL;
   };
 
-  history.replaceState(null, '', ERROR);
+  history.replaceState(null, '', '/#/' + ERROR);
   return (
     <>
       <Header delete={true} />
