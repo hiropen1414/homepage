@@ -56,6 +56,24 @@ code {
   display: flex;
 }
 
+.footerList {
+  position: relative;
+  transition: .3s;
+}
+
+.footerList::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: #ffffff;
+  transition: .3s;
+}
+.footerList:hover::after {
+  width: 100%;
+}
 @import '~antd/dist/antd.css';
 
 @font-face {
