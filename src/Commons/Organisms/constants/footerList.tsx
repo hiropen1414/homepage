@@ -26,7 +26,7 @@ const listStyle = {
 export const FOOTER_INFO: {
   [key: string]: {
     [key: string]: {
-      name: string | ReactNode;
+      content: string | ReactNode;
       path: string;
       style?: React.CSSProperties;
       className?: string;
@@ -35,19 +35,19 @@ export const FOOTER_INFO: {
 } = {
   club: {
     top: {
-      name: 'トップページ',
+      content: 'トップページ',
       path: '#',
       style: listStyle,
       className: FOOTER_CLASS_NAME
     },
     siteMap: {
-      name: 'サイトマップ',
+      content: 'サイトマップ',
       path: '#',
       style: listStyle,
       className: FOOTER_CLASS_NAME
     },
     activity: {
-      name: '活動について',
+      content: '活動について',
       path: HOME_URL,
       style: listStyle,
       className: FOOTER_CLASS_NAME
@@ -55,25 +55,25 @@ export const FOOTER_INFO: {
   },
   activity: {
     game: {
-      name: 'ゲーム作品',
+      content: 'ゲーム作品',
       path: GAME_PATH,
       style: listStyle,
       className: FOOTER_CLASS_NAME
     },
     media: {
-      name: 'メディア作品',
+      content: 'メディア作品',
       path: MEDIA_PATH,
       style: listStyle,
       className: FOOTER_CLASS_NAME
     },
     web: {
-      name: 'web作品',
+      content: 'web作品',
       path: WEB_PATH,
       style: listStyle,
       className: FOOTER_CLASS_NAME
     },
     elect: {
-      name: '電子工作品',
+      content: '電子工作品',
       path: ELECT_PATH,
       style: listStyle,
       className: FOOTER_CLASS_NAME
@@ -81,13 +81,13 @@ export const FOOTER_INFO: {
   },
   help: {
     question: {
-      name: 'よくあるご質問',
+      content: 'よくあるご質問',
       path: QUESTION_PATH,
       style: listStyle,
       className: FOOTER_CLASS_NAME
     },
     inquiry: {
-      name: 'お問い合わせ',
+      content: 'お問い合わせ',
       path: INQUIRY_PATH,
       style: listStyle,
       className: FOOTER_CLASS_NAME
@@ -95,7 +95,7 @@ export const FOOTER_INFO: {
   },
   sns: {
     twitter: {
-      name: <Anchor
+      content: <Anchor
         blank={true}
         link='https://twitter.com/meisei_denkibu'
         content={<Image styles={{ width: 88 }} src={twitterIcon} preview={false} />}
@@ -107,7 +107,7 @@ export const FOOTER_INFO: {
       }
     },
     youtube: {
-      name: <Anchor
+      content: <Anchor
         blank={true}
         link='https://www.youtube.com/channel/UC8mW4b5AgJsmDdX_oxM6t-w'
         content={<Image styles={{ width: 88 }} src={youtubeIcon} preview={false} />}

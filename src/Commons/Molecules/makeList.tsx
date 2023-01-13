@@ -43,7 +43,7 @@ export const MakeList = () => {
                       key={id}
                       onClick={() => { navigate(FOOTER_INFO[key][id].path); }}
                     >
-                      {FOOTER_INFO[key][id].name}
+                      {FOOTER_INFO[key][id].content}
                     </li>
                   );
                 })
