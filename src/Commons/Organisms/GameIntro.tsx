@@ -129,16 +129,16 @@ export const GameIntro = () => {
     <>
       {Object.keys(GAME_INFO).map((key, index) => {
         return (
-          <div key={key} css={css(styles.introBox)}>
-            <div css={css(styles.describeBox)}>
-              <div css={css(styles.titleBox)}>
-                <p css={css(styles.gameTitle)}>{GAME_INFO[key].name}</p>
+          <div key={key} css={styles.introBox}>
+            <div css={styles.describeBox}>
+              <div css={styles.titleBox}>
+                <p css={styles.gameTitle}>{GAME_INFO[key].name}</p>
               </div>
-              <div css={css(styles.explanationBox)}>
-                <span css={css(styles.boxTitle)}>{DESCRIBE}</span>
-                <p css={css(styles.explanation)}>{makeNewLine(GAME_INFO[key].explanation)}</p>
+              <div css={styles.explanationBox}>
+                <span css={styles.boxTitle}>{DESCRIBE}</span>
+                <p css={styles.explanation}>{makeNewLine(GAME_INFO[key].explanation)}</p>
               </div>
-              <div css={css(styles.anchorBox)}>
+              <div css={styles.anchorBox}>
                 <Anchor
                   content={
                     <Button style={styles.button} label={PLAY} />
@@ -149,7 +149,7 @@ export const GameIntro = () => {
                 <p css={styles.caution}>{GAME_CAUTION}</p>
               </div>
             </div>
-            <div css={css(styles.subImage)}>
+            <div css={styles.subImage}>
               <SubImage gameImageNode={GAME_INFO[key].image} gameIndex={index} gameInfo={GAME_INFO} />
             </div>
           </div>
