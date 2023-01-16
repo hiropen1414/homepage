@@ -4,6 +4,8 @@ import { Carousel as AntCarousel } from 'antd';
 import { ReactNode } from 'react';
 
 type Props = {
+  autoplay?: boolean;
+  fade?: boolean;
   components: ReactNode;
   styles?: CSSInterpolation;
 }
@@ -11,7 +13,8 @@ type Props = {
 export const Carousel = (props: Props) => {
   return (
     <AntCarousel
-      autoplay
+      fade={props.fade}
+      autoplay={props.autoplay}
       css={css(props.styles)}
       key='img'
     >

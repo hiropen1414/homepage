@@ -1,5 +1,5 @@
-import Top from './Top';
-import { Game } from './Game';
+import Top from './Top/Top';
+import { Game } from './Game/Game';
 import { Error } from './Error';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ERROR_PATH, GAME_PATH, HOME_URL, INQUIRY_PATH } from '../Commons/constants/path';
