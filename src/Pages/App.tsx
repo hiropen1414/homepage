@@ -1,5 +1,5 @@
-import Top from './Top';
-import { Game } from './Game';
+import Top from './Top/Top';
+import { Game } from './Game/Game';
 import { Error } from './Error';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ERROR_PATH, GAME_PATH, HOME_URL } from '../Commons/constants/path';
@@ -7,8 +7,6 @@ import { NOT_FOUND_CODE } from '../Commons/constants/errorcode';
 import { NOT_FOUND } from '../Commons/constants/text';
 
 const App = () => {
-  const BASE_NAME = process.env.NODE_ENV === 'development' ? '/' : `${HOME_URL}`;
-  console.log(BASE_NAME);
   return (
     <BrowserRouter>
       <Routes>
