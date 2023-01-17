@@ -31,6 +31,7 @@ const Top = () => {
       <Header />
       <Carousel
         autoplay={true}
+        fade={false}
         components={topCarouselNode.node}
         styles={styles.carousel}
       />
