@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import { extend, isEqual } from 'lodash';
 import { ReactNode, useEffect, useState } from 'react';
 import { GameInfo } from '../../../Pages/Game/gameInfo';
@@ -53,10 +54,10 @@ export const SubImage = (props: Props) => {
           return (
             <div
               key={nodeIndex}
-              style={extend(styles.subImage, {
+              css={css(extend(styles.subImage, {
                 opacity: (isChosenImage) ? 0.5 : 1,
                 border: `solid ${(isChosenImage) ? '2px red' : '1px rgb(70,70,70)'} `
-              })}
+              }))}
               onClick={() => onImgClick(gameIndex, nodeIndex)}
               className='subImage'
             >
