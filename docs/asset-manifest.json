@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/homepage/static/css/main.e866442a.css",
-    "main.js": "/homepage/static/js/main.7765350f.js",
+    "main.css": "/homepage/static/css/main.eda83915.css",
+    "main.js": "/homepage/static/js/main.1458238e.js",
     "static/media/elect.png": "/homepage/static/media/elect.af13ce7e98636ef36df7.png",
     "static/media/seiyuusai.png": "/homepage/static/media/seiyuusai.94afb942387eba00bf81.png",
     "static/media/seiyuusai2.png": "/homepage/static/media/seiyuusai2.e8abdfb7e4ada350fd57.png",
@@ -33,11 +33,11 @@
     "static/media/icon_footer.svg": "/homepage/static/media/icon_footer.8c6735a706bb00291b6e414581eb2d17.svg",
     "static/media/icon_twitter.svg": "/homepage/static/media/icon_twitter.e18fbf832f46c7279d6926edf5b5483c.svg",
     "index.html": "/homepage/index.html",
-    "main.e866442a.css.map": "/homepage/static/css/main.e866442a.css.map",
-    "main.7765350f.js.map": "/homepage/static/js/main.7765350f.js.map"
+    "main.eda83915.css.map": "/homepage/static/css/main.eda83915.css.map",
+    "main.1458238e.js.map": "/homepage/static/js/main.1458238e.js.map"
   },
   "entrypoints": [
-    "static/css/main.e866442a.css",
-    "static/js/main.7765350f.js"
+    "static/css/main.eda83915.css",
+    "static/js/main.1458238e.js"
   ]
 }

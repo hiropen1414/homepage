@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { Image } from '../../Commons/Atoms/Image/Image';
 import { Footer } from '../../Commons/Organisms/Footer';
 import { GameIntro } from '../../Commons/Organisms/GameIntro';
@@ -22,7 +21,7 @@ export const Game = () => {
   return (
     <div style={{ maxWidth: 1440, margin: 'auto', marginLeft: -17 }}>
       <Header />
-      <div css={css(styles.titleImgBox)}>
+      <div style={styles.titleImgBox}>
         <Image src={GAME_TITLE} preview={false} />
       </div>
       <GameIntro />

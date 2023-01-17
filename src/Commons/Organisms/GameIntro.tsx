@@ -118,7 +118,7 @@ export const GameIntro = () => {
                   link={GAME_INFO[key].link}
                   blank={true}
                 />
-                <p css={styles.caution}>{GAME_CAUTION}</p>
+                <p style={styles.caution}>{GAME_CAUTION}</p>
               </div>
             </div>
             <div style={styles.subImage}>

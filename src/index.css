@@ -106,6 +106,10 @@ code {
   filter: drop-shadow(0px 0px 7px rgb(70, 180, 255, 0.7));
 }
 
+.subImage:hover {
+  cursor: 'pointer',
+}
+
 @import '~antd/dist/antd.css';
 
 @font-face {

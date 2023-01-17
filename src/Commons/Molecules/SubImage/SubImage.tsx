@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { extend, isEqual } from 'lodash';
 import { ReactNode, useEffect, useState } from 'react';
 import { GameInfo } from '../../../Pages/Game/gameInfo';
@@ -21,7 +20,7 @@ export const SubImage = (props: Props) => {
     },
     subImage: {
       '&:hover': {
-        cursor: 'pointer',
+
       },
       width: 88,
       marginRight: 24,
@@ -45,20 +44,21 @@ export const SubImage = (props: Props) => {
 
   return (
     <>
-      <div css={css(styles.mainImage)}>
+      <div style={styles.mainImage}>
         {gameImageNode[pictureArray[gameIndex]]}
       </div>
-      <div css={css(styles.subImageBox)}>
+      <div style={styles.subImageBox}>
         {gameImageNode.map((imageContent, nodeIndex) => {
           const isChosenImage = isEqual(pictureArray[gameIndex], nodeIndex);
           return (
             <div
               key={nodeIndex}
-              css={css(extend(styles.subImage, {
+              style={extend(styles.subImage, {
                 opacity: (isChosenImage) ? 0.5 : 1,
                 border: `solid ${(isChosenImage) ? '2px red' : '1px rgb(70,70,70)'} `
-              }))}
+              })}
               onClick={() => onImgClick(gameIndex, nodeIndex)}
+              className='subImage'
             >
               {imageContent}
             </div>

@@ -2,7 +2,7 @@ import Top from './Top/Top';
 import { Game } from './Game/Game';
 import { Error } from './Error';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ERROR_PATH, GAME_PATH, HOME_URL, INQUIRY_PATH } from '../Commons/constants/path';
+import { ERROR_PATH, GAME_PATH, HOME_URL } from '../Commons/constants/path';
 import { NOT_FOUND_CODE } from '../Commons/constants/errorcode';
 import { NOT_FOUND } from '../Commons/constants/text';
 
