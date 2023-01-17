@@ -1,5 +1,4 @@
-import { css } from '@emotion/react';
-import { extend, isEqual } from 'lodash';
+import { isEqual } from 'lodash';
 import { ReactNode, useEffect, useState } from 'react';
 import { GameInfo } from '../../../Pages/Game/gameInfo';
 
