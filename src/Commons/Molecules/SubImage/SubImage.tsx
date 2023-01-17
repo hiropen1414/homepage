@@ -19,15 +19,6 @@ export const SubImage = (props: Props) => {
       height: 356,
       border: 'solid 2px black',
     },
-    subImage: {
-      '&:hover': {
-
-      },
-      width: 88,
-      marginRight: 24,
-      opacity: 1,
-      border: 'none'
-    },
     subImageBox: {
       display: 'flex',
       marginTop: 16,
@@ -54,10 +45,12 @@ export const SubImage = (props: Props) => {
           return (
             <div
               key={nodeIndex}
-              css={css(extend(styles.subImage, {
+              style={{
                 opacity: (isChosenImage) ? 0.5 : 1,
-                border: `solid ${(isChosenImage) ? '2px red' : '1px rgb(70,70,70)'} `
-              }))}
+                border: `solid ${(isChosenImage) ? '2px red' : '1px rgb(70,70,70)'} `,
+                width: 88,
+                marginRight: 24,
+              }}
               onClick={() => onImgClick(gameIndex, nodeIndex)}
               className='subImage'
             >
