@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { GAME_INFO } from '../../Pages/Game/gameInfo';
 import { Anchor } from '../Atoms/Anchor/Anchor';
 import { Button } from '../Atoms/Button/Button';
@@ -24,30 +23,6 @@ export const GameIntro = () => {
       background: 'rgb(32 255 180)',
       color: '#ffffff',
       boxSizing: 'border-box' as const,
-      '&:before': {
-        position: 'absolute' as const,
-        content: '""',
-        width: 0,
-        height: 0,
-        zIndex: 1,
-        top: 0,
-        left: 0,
-        borderWidth: '1.5em 0px 1.5em 15px',
-        borderColor: 'transparent transparent transparent #fff',
-        borderStyle: 'solid',
-      },
-      '&:after': {
-        position: 'absolute' as const,
-        content: '""',
-        width: 0,
-        height: 0,
-        zIndex: 1,
-        top: 0,
-        right: 0,
-        borderWidth: '30px 15px 30px 0',
-        borderColor: 'transparent #fff transparent transparent',
-        borderStyle: 'solid',
-      }
     },
     explanationBox: {
       display: 'table',
@@ -108,9 +83,6 @@ export const GameIntro = () => {
       left: 64,
       display: 'block',
       transition: '0.5s',
-      '&:hover': {
-        filter: 'drop-shadow(0px 0px 7px rgb(70,180,255,0.7))'
-      }
     },
     button: {
       width: '100%',
@@ -129,16 +101,16 @@ export const GameIntro = () => {
     <>
       {Object.keys(GAME_INFO).map((key, index) => {
         return (
-          <div key={key} css={styles.introBox}>
-            <div css={styles.describeBox}>
-              <div css={styles.titleBox}>
-                <p css={styles.gameTitle}>{GAME_INFO[key].name}</p>
+          <div key={key} style={styles.introBox}>
+            <div style={styles.describeBox}>
+              <div style={styles.titleBox} className='titleBox'>
+                <p style={styles.gameTitle}>{GAME_INFO[key].name}</p>
               </div>
-              <div css={styles.explanationBox}>
-                <span css={styles.boxTitle}>{DESCRIBE}</span>
-                <p css={styles.explanation}>{makeNewLine(GAME_INFO[key].explanation)}</p>
+              <div style={styles.explanationBox}>
+                <span style={styles.boxTitle}>{DESCRIBE}</span>
+                <p style={styles.explanation}>{makeNewLine(GAME_INFO[key].explanation)}</p>
               </div>
-              <div css={styles.anchorBox}>
+              <div style={styles.anchorBox} className='gameAnchor'>
                 <Anchor
                   content={
                     <Button style={styles.button} label={PLAY} />
@@ -149,7 +121,7 @@ export const GameIntro = () => {
                 <p css={styles.caution}>{GAME_CAUTION}</p>
               </div>
             </div>
-            <div css={styles.subImage}>
+            <div style={styles.subImage}>
               <SubImage gameImageNode={GAME_INFO[key].image} gameIndex={index} gameInfo={GAME_INFO} />
             </div>
           </div>
