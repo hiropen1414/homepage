@@ -71,9 +71,41 @@ code {
   background-color: #ffffff;
   transition: .3s;
 }
+
 .footerList:hover::after {
   width: 100%;
 }
+
+.titleBox::before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  z-Index: 1;
+  top: 0;
+  left: 0;
+  border-width: 1.5em 0px 1.5em 15px;
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+}
+
+.titleBox::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  border-width: 30px 15px 30px 0;
+  border-color: transparent #fff transparent transparent;
+  border-style: solid;
+}
+
+.gameAnchor:hover {
+  filter: drop-shadow(0px 0px 7px rgb(70, 180, 255, 0.7));
+}
+
 @import '~antd/dist/antd.css';
 
 @font-face {
