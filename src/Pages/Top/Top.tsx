@@ -8,8 +8,9 @@ import { topCarouselNode } from './TopCarouselNode';
 const styles = {
   carousel: {
     background: '#f5f5f5',
-    width: '100vw',
-    maxWidth: '1440px',
+    width: '100%',
+    maxWidth: '100vw',
+    margin: 'auto',
   },
   font: {
     fontSize: '3.5em',
@@ -22,22 +23,36 @@ const styles = {
     paddingBottom: '1.5em',
     textDecoration: 'underline',
     textUnderlineOffset: 8,
+  },
+  intro: {
+    width: '100%',
+    maxWidth: '100%',
+    margin: 'auto'
+  },
+  carouselBox: {
+    margin: 'auto',
+    width: '1400px',
+    maxWidth: '100%'
   }
 };
 
 const Top = () => {
   return (
-    <div style={{ maxWidth: 1440, margin: 'auto', marginLeft: -17 }}>
+    <div style={{ width: '100%', maxWidth: '100%' }}>
       <Header />
-      <Carousel
-        autoplay={true}
-        fade={false}
-        components={topCarouselNode.node}
-        styles={styles.carousel}
-      />
-      <Introduction headline={{
-        style: styles.text
-      }} />
+      <div style={styles.carouselBox}>
+        <Carousel
+          autoplay={true}
+          fade={false}
+          components={topCarouselNode.node}
+          styles={styles.carousel}
+        />
+      </div>
+      <div style={styles.intro}>
+        <Introduction headline={{
+          style: styles.text
+        }} />
+      </div>
       <Footer />
     </div>
   );

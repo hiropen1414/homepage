@@ -15,16 +15,22 @@ export const Media = () => {
       width: 400,
       margin: 'auto',
       marginTop: 24,
+    },
+    mediaBox: {
+      width: 1400,
+      margin: 'auto'
     }
   };
 
   return (
-    <div style={{ maxWidth: 1440, margin: 'auto', marginLeft: -17 }}>
+    <div style={{ width: '100%' }}>
       <Header />
       <div style={styles.titleImgBox}>
         <Image src={MEDIA_TITLE} preview={false} />
       </div>
-      <MediaIntro />
+      <div style={styles.mediaBox}>
+        <MediaIntro />
+      </div>
       <Footer />
     </div >
   );

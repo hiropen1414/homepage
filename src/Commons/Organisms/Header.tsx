@@ -27,21 +27,25 @@ export const Header = (props: Props) => {
       boxShadow: 'rgba(122,122,122,0.0588235) 0px 0px 24px 20px',
     },
     search: {
-      position: 'absolute' as const,
-      right: 8,
-      marginTop: 35
+      marginTop: 35,
+      marginLeft: '50vw'
     },
     menuBox: {
       display: 'table',
-      width: '100vw',
-      maxWidth: '1440px',
+      width: '100%',
+      maxWidth: '100%',
     },
     imgBox: {
       marginLeft: 48,
+    },
+    headerBox: {
+      width: '100%',
+      margin: 'auto'
     }
   };
+
   return (
-    <>
+    <div style={style.headerBox}>
       <div style={style.headerDesign}>
         <div style={style.imgBox}>
           <Image src={logo} styles={style.defaultImage} preview={false} />
@@ -57,6 +61,6 @@ export const Header = (props: Props) => {
           <Menu theme='light' mode={HORIZONTAL} style={style.menu} />
         </div>
       }
-    </>
+    </div>
   );
 };
