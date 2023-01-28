@@ -14,7 +14,7 @@ export const SubImage = (props: Props) => {
   const styles = {
     mainImage: {
       marginTop: 24,
-      width: 624,
+      width: 600,
       height: 356,
       border: 'solid 2px black',
     },

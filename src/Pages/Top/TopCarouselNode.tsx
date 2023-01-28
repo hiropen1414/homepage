@@ -14,7 +14,7 @@ const styles = {
     height: 450,
     width: '100vw',
     backgroundSize: 'contain',
-    maxWidth: '1440px',
+    maxWidth: '100%',
   },
 };
 

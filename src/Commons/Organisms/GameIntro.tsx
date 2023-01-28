@@ -94,6 +94,11 @@ export const GameIntro = () => {
     },
     caution: {
       textAlign: 'right' as const
+    },
+    gameBox: {
+      width: '100%',
+      maxWidth: '1400px',
+      margin: 'auto'
     }
   };
 
@@ -101,28 +106,30 @@ export const GameIntro = () => {
     <>
       {Object.keys(GAME_INFO).map((key, index) => {
         return (
-          <div key={key} style={styles.introBox}>
-            <div style={styles.describeBox}>
-              <div style={styles.titleBox} className='titleBox'>
-                <p style={styles.gameTitle}>{GAME_INFO[key].name}</p>
+          <div key={key} style={styles.gameBox}>
+            <div style={styles.introBox}>
+              <div style={styles.describeBox}>
+                <div style={styles.titleBox} className='titleBox'>
+                  <p style={styles.gameTitle}>{GAME_INFO[key].name}</p>
+                </div>
+                <div style={styles.explanationBox}>
+                  <span style={styles.boxTitle}>{DESCRIBE}</span>
+                  <p style={styles.explanation}>{makeNewLine(GAME_INFO[key].explanation)}</p>
+                </div>
+                <div style={styles.anchorBox} className='gameAnchor'>
+                  <Anchor
+                    content={
+                      <Button style={styles.button} label={PLAY} />
+                    }
+                    link={GAME_INFO[key].link}
+                    blank={true}
+                  />
+                  <p style={styles.caution}>{GAME_CAUTION}</p>
+                </div>
               </div>
-              <div style={styles.explanationBox}>
-                <span style={styles.boxTitle}>{DESCRIBE}</span>
-                <p style={styles.explanation}>{makeNewLine(GAME_INFO[key].explanation)}</p>
+              <div style={styles.subImage}>
+                <SubImage gameImageNode={GAME_INFO[key].image} gameIndex={index} gameInfo={GAME_INFO} />
               </div>
-              <div style={styles.anchorBox} className='gameAnchor'>
-                <Anchor
-                  content={
-                    <Button style={styles.button} label={PLAY} />
-                  }
-                  link={GAME_INFO[key].link}
-                  blank={true}
-                />
-                <p style={styles.caution}>{GAME_CAUTION}</p>
-              </div>
-            </div>
-            <div style={styles.subImage}>
-              <SubImage gameImageNode={GAME_INFO[key].image} gameIndex={index} gameInfo={GAME_INFO} />
             </div>
           </div>
         );

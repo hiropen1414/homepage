@@ -15,16 +15,22 @@ export const Game = () => {
       width: 400,
       margin: 'auto',
       marginTop: 24,
+    },
+    gameBox: {
+      width: '100%',
+      maxWidth: '100%',
     }
   };
 
   return (
-    <div style={{ maxWidth: 1440, margin: 'auto', marginLeft: -17 }}>
+    <div style={{ width: '100%', maxWidth: '100%', margin: 'auto' }}>
       <Header />
       <div style={styles.titleImgBox}>
         <Image src={GAME_TITLE} preview={false} />
       </div>
-      <GameIntro />
+      <div style={styles.gameBox}>
+        <GameIntro />
+      </div>
       <Footer />
     </div >
   );
