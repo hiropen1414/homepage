@@ -38,3 +38,5 @@ export const GAME_LIST = 'ゲーム作品一覧';
 export const DESCRIBE = 'describe';
 export const PLAY = 'Go To Play';
 export const GAME_CAUTION = '※外部サイトへ遷移します。';
+
+export const QUESTION_TITLE = 'よくある質問集(Q&A)';
