@@ -1,3 +1,25 @@
+# new-denki_homepage
+2023/1/30: リポジトリの移動を行いました。旧リポジトリは<a href="https://github.com/hiropen1414/homepage" target="_blank">こちら</a>です。
+
+
+# 概要
+リポジトリ一覧にあるold-denki_homepageをraectでリニューアルしたものです。デザイン的な問題があったのと、もともと旧サイトもコンポーネント指向で開発していたのでreactで設計し直しました。
+# 使用言語
+- html/css
+- JavaScript(React.js)
+- TypeScript
+- GraphQL(AppSync)
+
+#工夫した点など
+ブランチモデルは「git-flow」を採用しています。(2023/1/30:リポジトリを移動したのでPRやfeatureBranchは残っていません。上記の旧リポジトリに残っています。)
+Uiデザインモデルは「Atomic design」を使用し、「Ant design」のコンポーネントを一部使用しています。
+タスク管理ツールとして、「Trello」を用いて要件定義などを行っています。
+<img src="https://user-images.githubusercontent.com/123922176/215470343-632b01f3-ee49-43bc-bde1-c10e56aebfd8.png" width="600px">
+<img src="https://user-images.githubusercontent.com/123922176/215470683-d2064f0a-eb33-45ce-a97f-380bc5f984dd.png" width="400px">
+
+Atomic Designに則り、コンポーネント設計に汎用性を持たせるよう意識しています。
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
