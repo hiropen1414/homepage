@@ -4,6 +4,8 @@ import { Header } from '../../Commons/Organisms/Header';
 import { Introduction } from '../../Commons/Organisms/Introduction';
 import { Footer } from '../../Commons/Organisms/Footer';
 import { topCarouselNode } from './TopCarouselNode';
+import { gql, useQuery } from '@apollo/client';
+import { useEffect } from 'react';
 
 const styles = {
   carousel: {
@@ -37,9 +39,29 @@ const styles = {
 };
 
 const Top = () => {
+  const GET_DATA = gql`
+  query ListEvents {
+    listEvents {
+      items {
+        id
+        member
+        name
+        when
+        where
+        how
+        description
+      }
+    }
+  }
+  `;
+  const { data, loading } = useQuery(GET_DATA);
+  useEffect(() => {
+    if(data){
+      console.log(data);
+    }
+  }, [loading]);
   return (
     <div style={{ width: '100%', maxWidth: '100%' }}>
-      <Header />
       <Header />
       <div style={styles.carouselBox}>
         <Carousel
