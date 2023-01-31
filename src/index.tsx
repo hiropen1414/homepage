@@ -7,7 +7,7 @@ import { setContext } from '@apollo/client/link/context';
 
 const endpoint = process.env.GRAPHQL_ENDPOINT;
 
-const authLink = setContext((_: any, { headers }: any) => {
+const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
