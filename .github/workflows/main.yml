@@ -7,12 +7,16 @@ on:
 
 jobs:
   env:
-    API_KEY: ${{ secrets.API_KEY }}
-    GRAPHQL_ENDPOINT: ${{ secrets.GRAPHQL_ENDPOINT }}
+    name: Environment Variables
+    runs-on: ubuntu-latest
+    
+    env:
+      API_KEY: ${{ secrets.API_KEY }}
+      GRAPHQL_ENDPOINT: ${{ secrets.GRAPHQL_ENDPOINT }}
     
     steps:
-  - name: Some step name
-    run: echo "This is a step"
+      - name: Some step name
+        run: echo "This is a step"
 
   build-and-deploy:
     runs-on: ubuntu-latest
