@@ -40,6 +40,7 @@ const Top = () => {
   return (
     <div style={{ width: '100%', maxWidth: '100%' }}>
       <Header />
+      <Header />
       <div style={styles.carouselBox}>
         <Carousel
           autoplay={true}
