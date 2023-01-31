@@ -26,6 +26,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.HOMEPAGE_TOKEN }}
-        apiKey: ${{ env.API_KEY }}
-        endPoint: ${{ env.GRAPHQL_ENDPOINT }}
         publish_dir: ./build
