@@ -22,7 +22,7 @@ const styles = {
     marginTop: '-2em',
     paddingBottom: '1.5em',
     textDecoration: 'underline',
-    textUnderlineOffset: 8,
+    textUnderlineOffset: 16,
   },
   intro: {
     width: '100%',

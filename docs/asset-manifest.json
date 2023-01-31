@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/new-denki_homepage/static/css/main.bc4e7188.css",
-    "main.js": "/new-denki_homepage/static/js/main.fee76e13.js",
+    "main.js": "/new-denki_homepage/static/js/main.5766c183.js",
     "static/media/elect.png": "/new-denki_homepage/static/media/elect.af13ce7e98636ef36df7.png",
     "static/media/seiyuusai.png": "/new-denki_homepage/static/media/seiyuusai.94afb942387eba00bf81.png",
     "static/media/seiyuusai2.png": "/new-denki_homepage/static/media/seiyuusai2.e8abdfb7e4ada350fd57.png",
@@ -38,10 +38,10 @@
     "index.html": "/new-denki_homepage/index.html",
     "static/media/check-circle.svg": "/new-denki_homepage/static/media/check-circle.bb5108dfdc6e5ff84276127ff4bac4bc.svg",
     "main.bc4e7188.css.map": "/new-denki_homepage/static/css/main.bc4e7188.css.map",
-    "main.fee76e13.js.map": "/new-denki_homepage/static/js/main.fee76e13.js.map"
+    "main.5766c183.js.map": "/new-denki_homepage/static/js/main.5766c183.js.map"
   },
   "entrypoints": [
     "static/css/main.bc4e7188.css",
-    "static/js/main.fee76e13.js"
+    "static/js/main.5766c183.js"
   ]
 }
