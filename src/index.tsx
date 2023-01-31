@@ -9,8 +9,8 @@ import App from './Pages/App';
 //   cache: new InMemoryCache(),
 // });
 
-const api = process.env.API_KEY;
-console.log(api);
+// const api = process.env.API_KEY;
+// console.log(api);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
