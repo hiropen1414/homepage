@@ -1,25 +1,39 @@
-import React from 'react';
+
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './Pages/App';
-// import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
-// const client = new ApolloClient({
-//   uri: 'https://flyby-gateway.herokuapp.com/',
-//   cache: new InMemoryCache(),
-// });
+const endpoint = process.env.GRAPHQL_ENDPOINT;
 
-// const api = process.env.API_KEY;
-// console.log(api);
+const authLink = setContext((_: any, { headers }: any) => {
+  return {
+    headers: {
+      ...headers,
+      'x-api-key': process.env.API_KEY,
+    }
+  };
+});
+
+// Apollo Clientのインスタンスを作成
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: authLink.concat(
+    new HttpLink({
+      uri: endpoint,
+    })
+  )
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
 root.render(
-  <React.StrictMode>
+  <ApolloProvider client={client}>
     <App />
-  </React.StrictMode>
+  </ApolloProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
