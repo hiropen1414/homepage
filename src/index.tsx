@@ -16,6 +16,7 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+console.log(process.env.API_KEY, endpoint);
 // Apollo Clientのインスタンスを作成
 const client = new ApolloClient({
   cache: new InMemoryCache(),
