@@ -1,16 +1,17 @@
 {
   "name": "homepage",
-  "homepage": "https://HiroakiInaba.github.io/new-denki_homepage" ,
+  "homepage": "https://HiroakiInaba.github.io/new-denki_homepage",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
     "@apollo/client": "^3.7.2",
-    "@craco/craco": "^6.4.5",
+    "@craco/craco": "^7.0.0",
     "@emotion/react": "^11.10.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/bonjour": "^3.5.10",
     "@types/jest": "^27.5.2",
     "@types/lodash": "^4.14.188",
     "@types/node": "^16.18.3",
@@ -20,7 +21,7 @@
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
