@@ -17,6 +17,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
+
+    - name: Print environment variables
+      run: |
+        echo "API_KEY: $API_KEY"
+        echo "GRAPHQL_ENDPOINT: $GRAPHQL_ENDPOINT"
+
     - name: Build
       run: |
         npm ci
