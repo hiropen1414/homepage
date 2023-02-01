@@ -15,7 +15,7 @@ const authLink = setContext((_, { headers }) => {
     }
   };
 });
-console.log(process.env, process);
+console.log(process.env);
 console.log('API', process.env.API_KEY, 'END', endpoint);
 // Apollo Clientのインスタンスを作成
 const client = new ApolloClient({
