@@ -17,21 +17,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    # - name: create env file
-    #   run: |
-    #     touch .env
-    #     echo REACT_APP_API_KEY=${{ secrets.REACT_APP_API_KEY }} >> .env
-    #     echo REACT_APP_GRAPHQL_ENDPOINT=${{ secrets.REACT_APP_GRAPHQL_ENDPOINT }} >> .env
-
     - name: Install dependencies
       run: |
         npm ci
         npm install @craco/craco
-
-    # - name: Print environment variables
-    #   run: |
-    #     echo "API_KEY: $API_KEY"
-    #     echo "GRAPHQL_ENDPOINT: $GRAPHQL_ENDPOINT"
 
     - name: Build
       run: |
