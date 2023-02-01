@@ -29,7 +29,7 @@ export const Footer = () => {
       position: 'relative' as const,
       bottom: 0,
       width: '100%',
-      background: 'rgb(38, 38, 38)',
+      background: 'rgb(37, 37, 37)',
     }
   };
 
