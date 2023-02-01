@@ -19,13 +19,13 @@ jobs:
 
     - name: Start React App
       run: |
-      npm start &
-      echo "React App Started"
+        npm run start
+        echo "React App Started"
 
     - name: Check React App
       run: |
-      curl localhost:3000
-      echo "React App is Running"
+        curl localhost:3000
+        echo "React App is Running"
 
     - name: Print environment variables
       run: |
