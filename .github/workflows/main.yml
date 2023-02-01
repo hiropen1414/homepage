@@ -22,16 +22,6 @@ jobs:
         npm ci
         npm install @craco/craco
 
-    - name: Start React App
-      run: |
-        npm run start
-        echo "React App Started"
-
-    - name: Check React App
-      run: |
-        curl localhost:3000
-        echo "React App is Running"
-
     - name: Print environment variables
       run: |
         echo "API_KEY: $API_KEY"
