@@ -4,9 +4,7 @@ import './index.css';
 import App from './Pages/App';
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import dotenv from 'dotenv';
 
-dotenv.config();
 const endpoint = process.env.GRAPHQL_ENDPOINT;
 
 const authLink = setContext((_, { headers }) => {
@@ -17,7 +15,7 @@ const authLink = setContext((_, { headers }) => {
     }
   };
 });
-
+console.log(process.env, process);
 console.log('API', process.env.API_KEY, 'END', endpoint);
 // Apollo Clientのインスタンスを作成
 const client = new ApolloClient({
