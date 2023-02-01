@@ -5,18 +5,18 @@ import App from './Pages/App';
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-const endpoint = process.env.GRAPHQL_ENDPOINT;
+const endpoint = process.env.REACT_APP_GRAPHQL_ENDPOINT;
 
 const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      'x-api-key': process.env.API_KEY,
+      'x-api-key': process.env.REACT_APP_API_KEY,
     }
   };
 });
 console.log(process.env);
-console.log('API', process.env.API_KEY, 'END', endpoint);
+console.log('API', process.env.REACT_APP_API_KEY, 'END', endpoint);
 // Apollo Clientのインスタンスを作成
 const client = new ApolloClient({
   cache: new InMemoryCache(),
