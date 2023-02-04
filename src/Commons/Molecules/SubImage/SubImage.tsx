@@ -1,6 +1,6 @@
 import { isEqual } from 'lodash';
 import { ReactNode, useEffect, useState } from 'react';
-import { GameInfo } from '../../../Pages/Game/gameInfo';
+import { GameInfo } from '../../Organisms/constants/gameInfo';
 
 type Props = {
   gameImageNode: ReactNode[];

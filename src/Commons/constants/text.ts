@@ -40,3 +40,13 @@ export const PLAY = 'Go To Play';
 export const GAME_CAUTION = '※外部サイトへ遷移します。';
 
 export const QUESTION_TITLE = 'よくある質問集(Q&A)';
+
+export const INQUIRY_TITLE = 'お問い合わせ';
+export const INQUIRY_SUBTITLE = '以下のフォームへのご回答の上、送信ボタンを押して下さい。\n頂いた内容は確認次第、担当者から折り返しご連絡させて頂きます。';
+export const VALIDATION_MESSAGE = 'この項目は必須です。';
+
+export const INPUT = 'input';
+export const TEXTAREA = 'textArea';
+
+export const PROPERTY_NAME = 'propertyName';
+export const PROPERTY_VALUE = 'propertyValue';

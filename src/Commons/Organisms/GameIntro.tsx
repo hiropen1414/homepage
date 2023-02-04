@@ -1,4 +1,4 @@
-import { GAME_INFO } from '../../Pages/Game/gameInfo';
+import { GAME_INFO } from './constants/gameInfo';
 import { Anchor } from '../Atoms/Anchor/Anchor';
 import { Button } from '../Atoms/Button/Button';
 import { DESCRIBE, GAME_CAUTION, PLAY } from '../constants/text';

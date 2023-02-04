@@ -1,4 +1,4 @@
-import { MEDIA_INFO } from '../../Pages/Media/mediaInfo';
+import { MEDIA_INFO } from './constants/mediaInfo';
 import { DESCRIBE } from '../constants/text';
 import { makeNewLine } from '../static/function/makeNewLine';
 

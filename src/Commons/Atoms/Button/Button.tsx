@@ -4,12 +4,19 @@ type Props = {
   label: string;
   type?: 'link' | 'text' | 'ghost' | 'default' | 'primary' | 'dashed' | undefined;
   style?: React.CSSProperties;
+  htmlType?: 'button' | 'submit' | 'reset';
   icon?: ReactNode | string;
   onClick?: React.MouseEventHandler<HTMLElement>
 }
 export const Button = (props: Props) => {
   return (
-    <AntButton icon={props.icon} type={props.type} onClick={props.onClick} style={props.style}>
+    <AntButton
+      icon={props.icon}
+      type={props.type}
+      onClick={props.onClick}
+      style={props.style}
+      htmlType={props.htmlType}
+    >
       {props.label}
     </AntButton>
   );
