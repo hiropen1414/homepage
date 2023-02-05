@@ -3,7 +3,7 @@ import { Image } from '../Commons/Atoms/Image/Image';
 import errorIcon from '../Commons/static/svg/icon_error.svg';
 import { Button } from '../Commons/Atoms/Button/Button';
 import { HOME_URL } from '../Commons/constants/path';
-import { ERROR } from '../Commons/constants/text';
+import { BACK_TO_TOP, ERROR } from '../Commons/constants/text';
 
 type navigateState = {
   state?: {
@@ -55,7 +55,7 @@ export const Error = (state: navigateState) => {
         <div style={style.imgBox}>
           <Image src={errorIcon} preview={false} styles={style.img} />
         </div>
-        <Button type='primary' label='topへ戻る' style={style.button} onClick={navigateTop} />
+        <Button type='primary' label={BACK_TO_TOP} style={style.button} onClick={navigateTop} />
       </div>
     </>
   );

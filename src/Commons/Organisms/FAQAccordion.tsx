@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Image } from '../Atoms/Image/Image';
 import IconQuestion from '../static/svg/question-chat.svg';
 import IconAnswer from '../static/svg/check-circle.svg';
-import { AccordionType } from '../../Pages/Question/questionInfo';
+import { AccordionType } from './constants/questionInfo';
 
 type Props = {
   content: AccordionType[];
