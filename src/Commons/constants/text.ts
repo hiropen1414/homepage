@@ -42,8 +42,15 @@ export const GAME_CAUTION = '※外部サイトへ遷移します。';
 export const QUESTION_TITLE = 'よくある質問集(Q&A)';
 
 export const INQUIRY_TITLE = 'お問い合わせ';
-export const INQUIRY_SUBTITLE = '以下のフォームへのご回答の上、送信ボタンを押して下さい。\n頂いた内容は確認次第、担当者から折り返しご連絡させて頂きます。';
+export const INQUIRY_SUBTITLE_ENTRY = '以下のフォームへのご回答の上、送信ボタンを押して下さい。\n頂いた内容は確認次第、担当者から折り返しご連絡させて頂きます。';
+export const INQUIRY_SUBTITLE_CONFIRM = '以下の内容で提出します。\n修正がある場合は、左下の修正ボタンを押してください。';
+export const INQUIRY_SUBTITLE_DONE = 'ご質問を承りました。確認が取れ次第、担当者からご連絡させていただきます。\nありがとうございました!';
 export const VALIDATION_MESSAGE = 'この項目は必須です。';
+export const BACK_TO_TOP = 'Topに戻る';
+
+export const ENTRY = 'entry';
+export const CONFIRM = 'confirm';
+export const DONE = 'done';
 
 export const INPUT = 'input';
 export const TEXTAREA = 'textArea';

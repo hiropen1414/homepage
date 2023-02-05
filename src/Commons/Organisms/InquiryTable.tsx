@@ -5,6 +5,7 @@ import { Table } from '../Atoms/Table/Table';
 import { PROPERTY_NAME, PROPERTY_VALUE } from '../constants/text';
 import { makeNewLine } from '../static/function/makeNewLine';
 import { InquiryType } from '../static/InquiryInfo/InquiryInfo';
+import { InquiryDone } from './InquiryDone';
 
 type Props = {
   inquiryData: InquiryType;
@@ -44,11 +45,16 @@ export const InquiryTable = (props: Props) => {
       marginTop: 48,
       paddingBottom: 88,
       display: 'flex'
+    },
+    confirm: {
+      textAlign: 'center' as const,
+      fontSize: '2em'
     }
   };
 
-  const { inquiryData, checkForm, onSubmit } = props;
+  const { inquiryData, checkForm } = props;
   const [dataSource, setDataSource] = useState<DataType[]>([]);
+  const [submit, setSubmit] = useState(false);
 
   useEffect(() => {
     const dataSet = (
@@ -78,28 +84,39 @@ export const InquiryTable = (props: Props) => {
     },
   ];
 
+  const setSubmitFunc = () => {
+    props.onSubmit();
+    setSubmit(true);
+  };
+
   return (
-    <div style={styles.table}>
-      <Table
-        pagiNation={false}
-        bordered={true}
-        dataSource={dataSource}
-        columns={columns}
-      />
-      <div style={styles.buttonBox}>
-        <Button
-          style={styles.backButton}
-          label='修正する'
-          type='primary'
-          onClick={checkForm}
-        />
-        <Button
-          style={styles.submitButton}
-          label='送信する'
-          type='primary'
-          onClick={onSubmit}
-        />
-      </div>
-    </div>
+    <>
+      {(submit) ? (
+        <InquiryDone />
+      ) : (
+        <>
+          <p style={styles.confirm}>送信内容確認</p>
+          <div style={styles.table}>
+            <Table
+              pagiNation={false}
+              bordered={true}
+              dataSource={dataSource}
+              columns={columns} />
+            <div style={styles.buttonBox}>
+              <Button
+                style={styles.backButton}
+                label='修正する'
+                type='primary'
+                onClick={checkForm} />
+              <Button
+                style={styles.submitButton}
+                label='送信する'
+                type='primary'
+                onClick={setSubmitFunc} />
+            </div>
+          </div>
+        </>
+      )}
+    </>
   );
 };

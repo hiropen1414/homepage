@@ -6,7 +6,8 @@ import { Form } from '../../Commons/Atoms/Form/Form';
 import { FormItem } from '../../Commons/Atoms/Form/FormItem';
 import { UPDATE_INQUIRY } from '../../Commons/constants/GraphQL/schema';
 import { CreateInquiryInput } from '../../Commons/constants/GraphQL/schemaType';
-import { INQUIRY_SUBTITLE, INQUIRY_TITLE } from '../../Commons/constants/text';
+import { CONFIRM, DONE, ENTRY, INQUIRY_TITLE } from '../../Commons/constants/text';
+import { InquiryTitle, INQUIRY_TITLE_TEXT } from '../../Commons/Organisms/constants/InquiryTitle';
 import { Header } from '../../Commons/Organisms/Header';
 import { InquiryForm } from '../../Commons/Organisms/InquiryForm';
 import { InquiryTable } from '../../Commons/Organisms/InquiryTable';
@@ -48,6 +49,7 @@ export const Inquiry = () => {
   };
 
   const [inquiryData, setInQuiryData] = useState(INQUIRY_INFO);
+  const [inquiryTitle, setInquiryTitle] = useState<InquiryTitle>(ENTRY);
   const [isFormCheck, setIsFormCheck] = useState(false);
   const [createMutation] = useMutation(UPDATE_INQUIRY);
 
@@ -60,6 +62,7 @@ export const Inquiry = () => {
 
   //mutation
   const onSubmit = () => {
+    setInquiryTitle(DONE);
     const inquiryDataValues = Object.values(inquiryData);
     const input = {
       name: inquiryDataValues[0].value,
@@ -72,12 +75,12 @@ export const Inquiry = () => {
       variables: {
         input
       }
-    }).then(() => {
-      console.log('fail');
     });
   };
 
+  //入力 <=> 確認
   const checkForm = () => {
+    (isFormCheck) ? setInquiryTitle(ENTRY) : setInquiryTitle(CONFIRM);
     setIsFormCheck(!isFormCheck);
   };
 
@@ -88,7 +91,7 @@ export const Inquiry = () => {
         <p style={styles.title}>{INQUIRY_TITLE}</p>
       </div>
       <div style={styles.subTitleBox}>
-        <p style={styles.subTitle} >{makeNewLine(INQUIRY_SUBTITLE)}</p>
+        <p style={styles.subTitle} >{makeNewLine(INQUIRY_TITLE_TEXT[inquiryTitle])}</p>
       </div>
       {(isFormCheck) ? (
         <InquiryTable

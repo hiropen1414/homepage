@@ -33,7 +33,6 @@ export const InquiryForm = (props: Props) => {
     }
   };
 
-  console.log(inquiryData);
   return (
     <>
       {Object.keys(inquiryData).map((key) => {
