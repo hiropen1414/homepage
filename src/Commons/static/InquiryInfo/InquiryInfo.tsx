@@ -46,7 +46,8 @@ export const INQUIRY_INFO: InquiryType = {
     name: '備考',
     label: 'remarks',
     value: '',
-    type: 'input',
+    type: 'textArea',
+    rows: 3,
     required: false
   }
 };
