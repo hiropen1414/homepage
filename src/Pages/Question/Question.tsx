@@ -1,7 +1,7 @@
 import { Accordion } from '../../Commons/Organisms/FAQAccordion';
 import { QUESTION_TITLE } from '../../Commons/constants/text';
 import { Header } from '../../Commons/Organisms/Header';
-import { QUESTION_INFO } from './questionInfo';
+import { QUESTION_INFO } from '../../Commons/Organisms/constants/questionInfo';
 import { Footer } from '../../Commons/Organisms/Footer';
 
 export const Question = () => {
