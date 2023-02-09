@@ -4,11 +4,11 @@ import { DataType } from '../Atoms/Table/dataType';
 import { Table } from '../Atoms/Table/Table';
 import { PROPERTY_NAME, PROPERTY_VALUE } from '../constants/text';
 import { makeNewLine } from '../static/function/makeNewLine';
-import { InquiryType } from '../static/InquiryInfo/InquiryInfo';
+import { FormType } from '../static/FormInfo/FormInfo';
 import { InquiryDone } from './InquiryDone';
 
 type Props = {
-  inquiryData: InquiryType;
+  inquiryData: FormType;
   onSubmit: () => void;
   checkForm: () => void;
 }

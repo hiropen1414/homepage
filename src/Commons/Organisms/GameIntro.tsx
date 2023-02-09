@@ -116,7 +116,7 @@ export const GameIntro = () => {
                   <span style={styles.boxTitle}>{DESCRIBE}</span>
                   <p style={styles.explanation}>{makeNewLine(GAME_INFO[key].explanation)}</p>
                 </div>
-                <div style={styles.anchorBox} className='gameAnchor'>
+                <div style={styles.anchorBox} className='AnchorExpand'>
                   <Anchor
                     content={
                       <Button style={styles.button} label={PLAY} />

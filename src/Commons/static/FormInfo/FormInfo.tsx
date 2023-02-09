@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type InquiryType = {
+export type FormType = {
   [key: string]: {
     label: string,
     name: string,
@@ -13,7 +13,7 @@ export type InquiryType = {
   }
 }
 
-export const INQUIRY_INFO: InquiryType = {
+export const INQUIRY_INFO: FormType = {
   name: {
     name: 'お名前(漢字)',
     label: 'name',
@@ -50,4 +50,26 @@ export const INQUIRY_INFO: InquiryType = {
     rows: 3,
     required: false
   }
+};
+
+export const LOGIN_INFO: FormType = {
+  name: {
+    name: 'メールアドレス',
+    label: 'mail',
+    value: '',
+    type: 'input'
+  },
+  password: {
+    name: 'パスワード',
+    label: 'path',
+    value: '',
+    type: 'password'
+  }
+};
+
+export const FORM_TYPE: {
+  [key: string]: FormType;
+} = {
+  0: INQUIRY_INFO,
+  1: LOGIN_INFO
 };
