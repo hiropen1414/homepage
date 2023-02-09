@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router';
+import { Button } from '../Atoms/Button/Button';
 import { Image } from '../Atoms/Image/Image';
+import { LOGIN_PATH } from '../constants/path';
 import { CLUB_INFO } from '../constants/text';
 import { MakeList } from '../Molecules/makeList';
 import { makeNewLine } from '../static/function/makeNewLine';
@@ -30,8 +33,16 @@ export const Footer = () => {
       bottom: 0,
       width: '100%',
       background: 'rgb(37, 37, 37)',
+    },
+    loginAnchor: {
+      backGround: 'white',
+      position: 'relative' as const,
+      top: 28,
+      right: -64,
     }
   };
+
+  const navigate = useNavigate();
 
   return (
     <div style={style.footer}>
@@ -40,6 +51,9 @@ export const Footer = () => {
         <div style={style.infoBox}>
           <Image src={logo} styles={style.image} preview={false} />
           <p style={style.infoText}>{makeNewLine(CLUB_INFO)}</p>
+          <Button label='部員の方はこちら' style={style.loginAnchor} type='primary' onClick={() => {
+            navigate(LOGIN_PATH);
+          }} />
         </div>
       </div>
     </div>

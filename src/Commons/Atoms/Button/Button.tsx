@@ -6,11 +6,13 @@ type Props = {
   style?: React.CSSProperties;
   htmlType?: 'button' | 'submit' | 'reset';
   icon?: ReactNode | string;
+  className?: string;
   onClick?: React.MouseEventHandler<HTMLElement>
 }
 export const Button = (props: Props) => {
   return (
     <AntButton
+      className={props.className}
       icon={props.icon}
       type={props.type}
       onClick={props.onClick}

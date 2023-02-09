@@ -54,6 +54,10 @@ export const DONE = 'done';
 
 export const INPUT = 'input';
 export const TEXTAREA = 'textArea';
+export const PASSWORD = 'password';
 
 export const PROPERTY_NAME = 'propertyName';
 export const PROPERTY_VALUE = 'propertyValue';
+
+export const ALERT_LOGIN = 'メールアドレスかパスワードが違います。';
+export const CLUB_MEMBER_LOGIN = '部員ログイン';
