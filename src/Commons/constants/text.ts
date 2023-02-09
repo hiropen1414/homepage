@@ -59,5 +59,7 @@ export const PASSWORD = 'password';
 export const PROPERTY_NAME = 'propertyName';
 export const PROPERTY_VALUE = 'propertyValue';
 
+export const LOGIN = 'Login';
 export const ALERT_LOGIN = 'メールアドレスかパスワードが違います。';
 export const CLUB_MEMBER_LOGIN = '部員ログイン';
+export const FOOTER_LOGIN = '部員の方はこちら';

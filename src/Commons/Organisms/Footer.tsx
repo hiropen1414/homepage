@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router';
 import { Button } from '../Atoms/Button/Button';
 import { Image } from '../Atoms/Image/Image';
 import { LOGIN_PATH } from '../constants/path';
-import { CLUB_INFO } from '../constants/text';
+import { CLUB_INFO, FOOTER_LOGIN } from '../constants/text';
 import { MakeList } from '../Molecules/makeList';
 import { makeNewLine } from '../static/function/makeNewLine';
 import logo from '../static/svg/icon_footer.svg';
@@ -51,9 +51,13 @@ export const Footer = () => {
         <div style={style.infoBox}>
           <Image src={logo} styles={style.image} preview={false} />
           <p style={style.infoText}>{makeNewLine(CLUB_INFO)}</p>
-          <Button label='部員の方はこちら' style={style.loginAnchor} type='primary' onClick={() => {
-            navigate(LOGIN_PATH);
-          }} />
+          <Button
+            label={FOOTER_LOGIN}
+            style={style.loginAnchor}
+            type='primary'
+            onClick={() => {
+              navigate(LOGIN_PATH);
+            }} />
         </div>
       </div>
     </div>

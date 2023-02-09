@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-/* 「signOut」をimport↓ */
+import { useState, useEffect } from 'react';
 import { onAuthStateChanged, signOut, User } from 'firebase/auth';
 import { auth } from '../../firebase';
 import { useNavigate } from 'react-router-dom';
