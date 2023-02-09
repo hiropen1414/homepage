@@ -9,10 +9,11 @@ import { CreateInquiryInput } from '../../Commons/constants/GraphQL/schemaType';
 import { CONFIRM, DONE, ENTRY, INQUIRY_TITLE } from '../../Commons/constants/text';
 import { InquiryTitle, INQUIRY_TITLE_TEXT } from '../../Commons/Organisms/constants/InquiryTitle';
 import { Header } from '../../Commons/Organisms/Header';
-import { InquiryForm } from '../../Commons/Organisms/InquiryForm';
+import { FormItems } from '../../Commons/Organisms/FormItems';
 import { InquiryTable } from '../../Commons/Organisms/InquiryTable';
 import { makeNewLine } from '../../Commons/static/function/makeNewLine';
-import { INQUIRY_INFO } from '../../Commons/static/InquiryInfo/InquiryInfo';
+import { FormType, FORM_TYPE } from '../../Commons/static/FormInfo/FormInfo';
+import { INQUIRY_INDEX } from '../../Commons/constants';
 
 export const Inquiry = () => {
 
@@ -48,7 +49,7 @@ export const Inquiry = () => {
     }
   };
 
-  const [inquiryData, setInQuiryData] = useState(INQUIRY_INFO);
+  const [inquiryData, setInquiryData] = useState<FormType>(FORM_TYPE[INQUIRY_INDEX]);
   const [inquiryTitle, setInquiryTitle] = useState<InquiryTitle>(ENTRY);
   const [isFormCheck, setIsFormCheck] = useState(false);
   const [createMutation] = useMutation(UPDATE_INQUIRY);
@@ -104,9 +105,9 @@ export const Inquiry = () => {
           labelCol={{ span: 13 }}
           style={styles.form}
         >
-          <InquiryForm
-            inquiryData={inquiryData}
-            setInQuiryData={setInQuiryData}
+          <FormItems
+            formData={inquiryData}
+            setFormData={setInquiryData}
             onSubmit={
               <FormItem name=''>
                 <Button
