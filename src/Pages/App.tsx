@@ -22,6 +22,7 @@ import { Login } from './Login/Login';
 import { ClubMemberTop } from './ClubMemberTop/ClubMemberTop';
 
 const App = () => {
+  console.log(process.env.PUBLIC_URL);
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ScrollToTop>
