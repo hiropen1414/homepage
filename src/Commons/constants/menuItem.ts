@@ -6,7 +6,7 @@ import { ACTIVITY_TEXT, ELECT_TEXT, GAME_TEXT, HOME_TEXT, INQUIRY_TEXT, MEDIA_TE
 export const MENU_ITEMS: MenuProps['items'] = [
   {
     label: HOME_TEXT,
-    key: HOME_URL.substring(HOME_URL.indexOf('/', 0) + 1),
+    key: HOME_URL
   },
   {
     label: MENU_LIST,
