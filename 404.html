@@ -19,6 +19,7 @@
     const repo = segments.slice(0, SEGMENT_COUNT).join('/');  //=> repo-name
     const param = segments.slice(SEGMENT_COUNT).join('/');  //=> book/123
     const url = origin + '/' + repo + '?p=' + encodeURIComponent(param);
+    console.log(url, loc.replace);
     loc.replace(url);
   </script>
 </head>
