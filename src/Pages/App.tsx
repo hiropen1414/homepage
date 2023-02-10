@@ -1,7 +1,7 @@
 import Top from './Top/Top';
 import { Game } from './Game/Game';
 import { Error } from './Error';
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
   CLUB_MEMBER_TOP_PATH,
   ERROR_PATH,
@@ -24,7 +24,7 @@ import { ClubMemberTop } from './ClubMemberTop/ClubMemberTop';
 const App = () => {
   console.log(process.env.PUBLIC_URL);
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop>
         <Routes>
           <Route path={HOME_URL} element={<Top />} />
@@ -42,7 +42,7 @@ const App = () => {
 
         </Routes>
       </ScrollToTop>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
