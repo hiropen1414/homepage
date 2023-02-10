@@ -14,7 +14,7 @@ const styles = {
   },
   font: {
     fontSize: '3.5em',
-    margin: '1.5em',
+    margin: '1.49em',
   },
   text: {
     fontSize: '1.25em',
