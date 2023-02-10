@@ -24,7 +24,7 @@ import { ClubMemberTop } from './ClubMemberTop/ClubMemberTop';
 const App = () => {
   console.log(process.env.PUBLIC_URL);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/new-denki_homepage'>
       <ScrollToTop>
         <Routes>
           <Route path={HOME_URL} element={<Top />} />
