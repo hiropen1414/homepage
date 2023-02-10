@@ -23,7 +23,7 @@ import { ClubMemberTop } from './ClubMemberTop/ClubMemberTop';
 
 const App = () => {
   return (
-    <BrowserRouter basename='/new-denki_homepage'>
+    <BrowserRouter>
       <ScrollToTop>
         <Routes>
           <Route path={HOME_URL} element={<Top />} />
