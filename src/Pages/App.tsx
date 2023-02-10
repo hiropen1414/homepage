@@ -23,7 +23,7 @@ import { ClubMemberTop } from './ClubMemberTop/ClubMemberTop';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ScrollToTop>
         <Routes>
           <Route path={HOME_URL} element={<Top />} />
