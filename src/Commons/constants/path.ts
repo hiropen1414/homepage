@@ -9,5 +9,5 @@ export const LOGIN_PATH = '/login';
 export const CLUB_MEMBER_TOP_PATH = '/login/clubMemberTop';
 export const CLUB_MEMBER_TOP_CHILD = '/clubMemberTop';
 
-export const HOME_URL = process.env.PUBLIC_URL;
+export const HOME_URL = '/';
 
